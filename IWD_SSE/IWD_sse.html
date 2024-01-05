@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Webpage</title>
+    <!--<link rel="'stylesheet" href="style_SSE.css">-->
+    <style>
+        *{
+    margin: 0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width:100%;
+    height:100vh;
+    background-image:
+     linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+     url(Background_2.png);
+     background-position: center;
+     background-size: cover;
+     padding-left: 8%;
+     padding-right: 8%;
+     box-sizing: border-box;
+}
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 50px;
+    cursor:pointer;
+}
+.menu-icon{
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+
+}
+.row{
+    display:flex;
+    height: 88%;
+    align-items: center;
+}
+.col{
+    flex-basis: 50%;
+}
+h1{
+    color:#fff;
+    font-size: 100px;
+    margin-bottom: 20px;/*margin added*/
+}
+p{
+  color: #fff;
+  font-size: 15px;
+  line-height: 15px;
+  margin-bottom: 40px;/*margin added*/
+}
+/*button{
+    width: 180px;
+    color: #000;
+    font-size:12px;
+    padding: 12px 0;
+    background: #fff;
+    border:0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+}*/
+.card{
+    width:200px;
+    height: 130px;
+    display:inline-block;
+    border-radius: 10px;
+    padding:15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(linkdin.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+.card1{
+    background-image: url(linkdin.jpg);
+}
+.card2{
+    background-image: url(GitHub.png);
+}
+/*.card3{
+    background-image: url(smiling_stickman.png);
+}
+.card4{
+    background-image: url(smiling_stickman.png);
+}*/
+.card:hover{
+    transform: translateY(-10px);
+}
+/*h5{
+    color: black;
+    text-shadow: 0 0 5px #999;
+}*/
+a{
+    color: black;
+    text-shadow: 0 0 5px #999;
+}
+.card p{
+    text-shadow: 8px;
+    color: black;
+}
+/*---about*/
+#about{
+    padding: 0px;
+    color: #ababab;
+}
+.row1{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width:70%;/*changed from 100 to70*/
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right:50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor:pointer;
+    position: relative;
+    /*new addition*/
+    
+}
+.tab-links::after{
+    content:'';
+    width:0;
+    height:3px;
+    background: #ff004f;
+    position:absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+    
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color:#b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display:block;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="smiling_stickman.png" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#" id="homeLink">Home</a></li>
+                    <li><a href="#" id="servicesLink">Services</a></li>
+                    <li><a href="#" id="aboutLink">About</a></li>
+                    <li><a href="#" id="contactLink">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="menu_SEE.jpg" class="menu-icon">
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1>Portfolio</h1>
+                <p>Hi, I'm Shubodh currently a student at RV University</p>
+                <!--<button type="button">Linkdin Profile</button>-->
+            </div>
+            <div class="col" >
+                <div class="card card1">
+                    <!--<h5>--><a href="https://www.linkedin.com/in/shubodh-c-92a5a12a6/">Linkdin</a><!--</h5>-->
+                    
+                    <p>connect with me throught linkdin</p>
+                </div>
+                <div class="card card2">
+                    <!--<h5></h5>--> <a href="Github.com">GitHub</a><!--</h5>-->
+                    
+                    <p>connect with me throught GitHub </p>
+                </div>
+              <!--  <div class="card card3">
+                    <h5>3 not decided yet</h5>
+                    <p>jjj</p>
+                </div>
+                <div class="card card4">
+                    <h5>4 not decided yet</h5>
+                    <p>jjj</p>
+                </div>-->
+            </div>
+        </div>
+
+    </div>
+    <!-- --about -->
+    <div id="about">
+        <div class="container">
+            <div class="row1">
+                <div class="about-col-1">
+                    <!--done some corrections here-->
+                    <img src="portfolio_img.avif" alt="Portfolio Image">
+            </div>
+            <div class="about-col-2"><h1 class="sub-title">About me</h1></div>
+            <p>Most of my schooling was done in my hometown Shimoga 
+            and i am now studying computer science in RV University Banglore<br>
+            I am very much interested in math,and how math is the blue print for all sciences 
+            that is why iam also where interested in computer science as computer is a device which runs on 1's and 0'<s></s>
+            </p>
+            <!--<div class="tab-links">
+                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+                
+            </div>
+            <div class="tab-contents active-tab" id="Skills" >
+                <ul>
+                    <li><span>UI</span><br> Web interfaces</li>
+                    <li><span>Web Development</span><br>Web app Development</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="Experience">
+                <ul>
+                    <li><span>2024-Current</span><br> C-program,html,css.javaScript</li>
+                    <li><span>2010-2022</span><br>Basic html and css</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+                <ul>
+                    <li><span>2024-Current</span><br> College student</li>
+                    <li><span>2010-2022</span><br>School Student</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>-->
+    <div class="tab-links" style ="text-align: left;" onclick="opentab('Skills')">Skills</div>
+    <div class="tab-links" style ="text-align: left;"  onclick="opentab('Experience')">Experience</div>
+    <div class="tab-links" style ="text-align: left;"  onclick="opentab('Education')">Education</div>
+    <div class="tab-contents active-tab" id="Skills">
+        <ul>
+            <li><span>UI</span><br> Web interfaces</li>
+            <li><span>Web Development</span><br>Web app Development</li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="Experience">
+        <ul>
+            <li><span>2024-Current</span><br> C-program, HTML, CSS, JavaScript</li>
+            <li><span>2010-2022</span><br>Basic HTML and CSS</li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="Education">
+        <ul>
+            <li><span>2024-Current</span><br> College student</li>
+            <li><span>2010-2022</span><br>School Student</li>
+        </ul>
+    </div>
+</div>
+</div>
+</div>
+    <script>
+       /*var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname,event){
+            for(var tablink of tablinks){
+                tablinks.classList.remove("active-link");
+            }
+            for(var tabcontents of tabcontents){
+                tabcontents.classList.remove("active-tab");
+            }
+            event.currentTargent.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }*/
+        function opentab(tabname) {
+            var tablinks = document.querySelectorAll('.tab-links');
+            var tabcontents = document.querySelectorAll('.tab-contents');
+            
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+            }
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].classList.remove("active-tab");
+            }
+
+            var activeTab = document.getElementById(tabname);
+            activeTab.classList.add("active-tab");
+            
+            event.currentTarget.classList.add("active-link");
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+        var aboutLink = document.getElementById('aboutLink');
+
+        aboutLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default behavior of the link
+
+            // Display an alert when the "About" link is clicked
+            alert('Scroll down');
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+    var contactLink = document.getElementById('contactLink');
+
+    contactLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevents the default behavior of the link
+
+        // Display an alert when the "Contact" link is clicked
+        alert('Please contact me through LinkedIn or GitHub');
+    });
+});
+/*document.addEventListener("DOMContentLoaded", function () {
+    var homeLink = document.getElementById('homeLink');
+    homeLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            alert('You are already on the Home Page');
+        });
+    });*/
+    document.addEventListener("DOMContentLoaded", function() {
+    var homeLink = document.getElementById('homeLink');
+
+    homeLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevents the default behavior of the link
+
+        // Display an alert when the "Home" link is clicked
+        alert('You are already in the home page');
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+        var servicesLink = document.getElementById('servicesLink');
+
+        servicesLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default behavior of the link
+
+            // Display an alert when the "Services" link is clicked
+            alert("Please contact me through LinkedIn to get further service information.");
+        });
+    });
+
+    </script>
+</body>
+</html>
